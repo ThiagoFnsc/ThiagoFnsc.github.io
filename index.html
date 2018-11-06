@@ -64,6 +64,28 @@
             .jumbotron {
                 padding: 1rem 2rem;
             }
+
+            .navbar {
+                background-color: #d9dcdf;
+            }
+
+            .jumbotron {
+                border-radius: 0 0 .3rem .3rem;
+            }
+
+            img {
+                height: 2.5rem;
+                margin-left: .25rem;
+                transition: transform .2s;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
+
+            img:active {
+                transform: scale(.9);
+            }
         </style>
         <script>
             function onLoad() {
@@ -72,17 +94,25 @@
         </script>
     </head>
     <body onload="onLoad()">
-        <div class="row">
-            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12" style="background-color: bisque">
-                <h1>Thiago Fonseca da Silveira</h1>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row" style="width:100%">
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
+                            <h2 style="text-align:center">Thiago Fonseca da Silveira</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-end justify-content-xl-end">
+                            <a href="https://www.facebook.com/ThiagoFnsc" target="_blank"><img src="imgs/facebook.svg"></a>
+                            <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank"><img src="imgs/whatsapp.svg"></a>
+                            <a href="mailto:ThiagoFnsc@outlook.com"><img src="imgs/outlook.svg"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12" style="background-color: azure">
-                <h1>ICONESSS</h1>
-            </div>
-        </div>
+        </nav>
         <div class="container">
-            <div class="page-header">
-            </div>
             <div class=" jumbotron">
                 <h3>Sobre</h3>
                 <p> Brasileiro, solteiro, <span id="idade">18</span> anos<br>
