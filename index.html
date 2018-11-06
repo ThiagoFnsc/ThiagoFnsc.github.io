@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <title>Currículo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            * {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin: 0;
+                font-size: 2.5vh;
+            }
+
+            h2,
+            h3 {
+                width: 100%;
+                border-bottom: 0.1vh solid black;
+                padding: .25vh;
+                margin-bottom: .25vh;
+            }
+
+            h3 {
+                margin-top: 3vh;
+            }
+
+            html,
+            body {
+                height: 100%;
+                background-color: lightgray;
+            }
+
+            div {
+                margin: 0 auto 0 auto;
+                background-color: white;
+            }
+
+            .centro {
+                width: 80vw;
+                min-height: 100%;
+                border-width: 0 1px 0 1px;
+                border-style: solid;
+            }
+
+            .conteudo {
+                width: 95%;
+                height: 95%;
+                padding-top: 2vh;
+            }
+
+            a {
+                text-decoration: none;
+                color: royalblue;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: darkslateblue;
+            }
+
+            @media only screen and (orientation: portrait) {
+                .centro {
+                    width: 100%;
+                }
+
+                * {
+                    font-size: 2vh;
+                }
+            }
+        </style>
+        <script>
+            function onLoad() {
+                document.getElementById("idade").innerText = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970;
+            }
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <div class="centro">
+            <div class="conteudo">
+                <h2>Thiago Fonseca da Silveira</h2>
+                <p>Brasileiro, solteiro, <span id="idade">18</span> anos</p>
+                <p>Rua Servidão dos Flôres, 89, apto. 1102</p>
+                <p>Jansen, Gravataí – RS</p>
+                <p>Telefone: <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51)
+                        996.389.877</a></p>
+                <p>E-mail: <a href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a></p>
+                <h3>Formação</h3>
+                <ul>
+                    <li>Curso de Ciência da Computação na ULBRA – Em andamento, 3º semestre</li>
+                    <li>Ensino médio na E.E.E.M. Ponche Verde – Concluído em 2016</li>
+                </ul>
+                <h3>Experiência profissional</h3>
+                <ul>
+                    <li>Trail Blazers, equipe de robótica de Gravataí – 2010-2014</li>
+                </ul>
+                <h3>Qualificações e atividades profissionais</h3>
+                <ul>
+                    <li>Curso de Inglês em Escolas e Faculdades QI – Concluído em 2018</li>
+                    <li>Curso de Técnico de Informática em Escolas e Faculdades QI – Concluído em 2017</li>
+                </ul>
+                <h3>Informações adicionais</h3>
+                <ul>
+                    <li>Certificado de aluno destaque em Banco de Dados do curso Técnico de Informática</li>
+                </ul>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Inglês: intermediário-avançado</li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
