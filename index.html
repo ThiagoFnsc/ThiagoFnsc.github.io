@@ -6,10 +6,6 @@
         <title>Currículo</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
-            .jumbotron {
-                padding: 1rem 2rem;
-            }
-
             .navbar {
                 background-color: #d9dcdf;
             }
@@ -20,7 +16,6 @@
 
             img {
                 height: 2.5rem;
-                margin-left: .25rem;
             }
 
             img:hover {
@@ -44,19 +39,10 @@
 
             section {
                 background-color: #f9fcff;
-                margin: .5rem 0;
-            }
-
-            ul,
-            p {
-                margin-bottom: .25rem;
             }
 
             h2 {
-                margin: 0;
                 border: .3rem solid transparent;
-                padding-bottom: .25rem;
-                border-radius: .25rem;
             }
 
             h2:hover {
@@ -67,17 +53,6 @@
                 background-color: #edefff;
             }
         </style>
-        <script>
-            function onLoad() {
-                var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970
-                var elemento = document.getElementById("idade");
-                elemento.innerText = `${idade} ${idade == 1 ? "ano" : "anos"}`;
-                if (idade < 18)
-                    elemento.innerText += " (seu relógio está incorreto ou você é um viajante do tempo :P)";
-                else if (idade >= 100)
-                    elemento.innerText += " (seu relógio está incorreto ou estou provavelmente morto :P)";
-            }
-        </script>
     </head>
     <body onload="onLoad()">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -85,58 +60,67 @@
                 <div class="row" style="width:100%; margin-left: 0">
                     <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
                         <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
-                            <h2 style="text-align:center">Thiago Fonseca da Silveira</h2>
+                            <h2 class="rounded m-0 pb-1" style="text-align:center">Thiago Fonseca da Silveira</h2>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-end justify-content-xl-end">
-                            <a href="https://www.facebook.com/ThiagoFnsc" target="_blank"><img src="imgs/facebook.svg"></a>
-                            <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank"><img src="imgs/whatsapp.svg"></a>
-                            <a href="mailto:ThiagoFnsc@outlook.com"><img src="imgs/outlook.svg"></a>
+                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-end justify-content-xl-end" style="margin-top: .35rem;">
+                            <a href="https://www.facebook.com/ThiagoFnsc" target="_blank"><img class="ml-1" src="imgs/facebook.svg"></a>
+                            <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank"><img class="ml-1" src="imgs/whatsapp.svg"></a>
+                            <a href="mailto:ThiagoFnsc@outlook.com"><img class="ml-1" src="imgs/outlook.svg"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="container">
-            <div class=" jumbotron">
+            <div class="jumbotron py-3 px-4">
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Sobre</h3>
-                    <p> Brasileiro, solteiro, <span id="idade"></span><br>
+                    <p class="mb-1"> Brasileiro, solteiro, <span id="idade"></span><br>
                         Rua Servidão dos Flôres, 89, apto. 1102<br>
                         Jansen, Gravataí – RS Telefone: <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51) 996.389.877</a><br>
                         E-mail: <a href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a>
                     </p>
+                    <script>
+                        var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970
+                        var elemento = document.getElementById("idade");
+                        elemento.innerText = `${idade} ${idade == 1 ? "ano" : "anos"}`;
+                        if (idade < 18)
+                            elemento.innerText += " (seu relógio está incorreto ou você é um viajante do tempo :P)";
+                        else if (idade >= 100)
+                            elemento.innerText += " (seu relógio está incorreto ou estou provavelmente morto :P)";
+                    </script>
                 </section>
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Formação</h3>
-                    <ul>
+                    <ul class="mb-1">
                         <li>Curso de Ciência da Computação na ULBRA – Em andamento, 3º semestre</li>
                         <li>Ensino médio na E.E.E.M. Ponche Verde – Concluído em 2016</li>
                     </ul>
                 </section>
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Experiência profissional</h3>
-                    <ul>
+                    <ul class="mb-1">
                         <li>Trail Blazers, equipe de robótica de Gravataí – 2010-2014</li>
                     </ul>
                 </section>
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Qualificações e atividades profissionais</h3>
-                    <ul>
+                    <ul class="mb-1">
                         <li>Curso de Inglês em Escolas e Faculdades QI – Concluído em 2018</li>
                         <li>Curso de Técnico de Informática em Escolas e Faculdades QI – Concluído em 2017</li>
                     </ul>
                 </section>
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Informações adicionais</h3>
-                    <ul>
+                    <ul class="mb-1">
                         <li>Certificado de aluno destaque em Banco de Dados do curso Técnico de Informática</li>
                     </ul>
                 </section>
                 <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Idiomas</h3>
-                    <ul>
+                    <ul class="mb-1">
                         <li>Inglês: intermediário-avançado</li>
                     </ul>
                 </section>
