@@ -45,7 +45,6 @@
             section {
                 background-color: #f9fcff;
                 margin: .5rem 0;
-                padding: .25rem .75rem;
             }
 
             ul,
@@ -70,7 +69,13 @@
         </style>
         <script>
             function onLoad() {
-                document.getElementById("idade").innerText = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970;
+                var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970
+                var elemento = document.getElementById("idade");
+                elemento.innerText = `${idade} ${idade == 1 ? "ano" : "anos"}`;
+                if (idade < 18)
+                    elemento.innerText += " (seu relógio está incorreto ou você é um viajante do tempo :P)";
+                else if (idade >= 100)
+                    elemento.innerText += " (seu relógio está incorreto ou estou provavelmente morto :P)";
             }
         </script>
     </head>
@@ -95,41 +100,41 @@
         </nav>
         <div class="container">
             <div class=" jumbotron">
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Sobre</h3>
-                    <p> Brasileiro, solteiro, <span id="idade">18</span> anos<br>
+                    <p> Brasileiro, solteiro, <span id="idade"></span><br>
                         Rua Servidão dos Flôres, 89, apto. 1102<br>
                         Jansen, Gravataí – RS Telefone: <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51) 996.389.877</a><br>
                         E-mail: <a href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a>
                     </p>
                 </section>
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Formação</h3>
                     <ul>
                         <li>Curso de Ciência da Computação na ULBRA – Em andamento, 3º semestre</li>
                         <li>Ensino médio na E.E.E.M. Ponche Verde – Concluído em 2016</li>
                     </ul>
                 </section>
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Experiência profissional</h3>
                     <ul>
                         <li>Trail Blazers, equipe de robótica de Gravataí – 2010-2014</li>
                     </ul>
                 </section>
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Qualificações e atividades profissionais</h3>
                     <ul>
                         <li>Curso de Inglês em Escolas e Faculdades QI – Concluído em 2018</li>
                         <li>Curso de Técnico de Informática em Escolas e Faculdades QI – Concluído em 2017</li>
                     </ul>
                 </section>
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Informações adicionais</h3>
                     <ul>
                         <li>Certificado de aluno destaque em Banco de Dados do curso Técnico de Informática</li>
                     </ul>
                 </section>
-                <section class="shadow-sm rounded">
+                <section class="shadow-sm px-4 py-2 my-2 rounded">
                     <h3>Idiomas</h3>
                     <ul>
                         <li>Inglês: intermediário-avançado</li>
