@@ -56,19 +56,19 @@
         </style>
     </head>
     <body>
-        <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+        <div class="navbar navbar-default navbar-fixed-top d-print-inline">
+            <div class="container ">
                 <div class="row" style="width:100%; margin-left: 0">
-                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 p-0">
                         <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
                             <h2 class="rounded m-0 pb-1" style="text-align:center">Thiago Fonseca da Silveira</h2>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 p-0">
                         <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-end justify-content-xl-end" style="margin-top: .35rem;">
-                            <a href="https://www.facebook.com/ThiagoFnsc" target="_blank"><img class="ml-1" src="imgs/facebook.svg"></a>
-                            <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank"><img class="ml-1" src="imgs/whatsapp.svg"></a>
-                            <a href="mailto:ThiagoFnsc@outlook.com"><img class="ml-1" src="imgs/outlook.svg"></a>
+                            <a title="GitHub" href="https://github.com/ThiagoFnsc" target="_blank"><img class="ml-1" src="imgs/github.svg"></a>
+                            <a title="LinkedIn" href="https://www.linkedin.com/in/thiagofnsc/" target="_blank"><img class="ml-1" src="imgs/linkedin.svg"></a>
+                            <a title="Email" href="mailto:ThiagoFnsc@outlook.com"><img class="ml-1" src="imgs/outlook.svg"></a>
                         </div>
                     </div>
                 </div>
@@ -80,11 +80,11 @@
                     <h3>Sobre</h3>
                     <p class="mb-1"> Brasileiro, solteiro, <span id="idade"></span><br>
                         Rua Servidão dos Flôres, 89, apto. 1102<br>
-                        Jansen, Gravataí – RS Telefone: <a href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51) 996.389.877</a><br>
-                        E-mail: <a href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a>
+                        Jansen, Gravataí – RS Telefone: <a title="WhatsApp" href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51) 996.389.877</a><br>
+                        E-mail: <a title="Email" href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a>
                     </p>
                     <script>
-                        var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970
+                        var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970;
                         var elemento = document.getElementById("idade");
                         elemento.innerText = `${idade} ${idade == 1 ? "ano" : "anos"}`;
                         if (idade < 18)
@@ -117,7 +117,7 @@
                     <h3>Habilidades</h3>
                     <ul class="mb-1">
                         <li>Linguagens de programação
-                            <ol>
+                            <ul>
                                 <li>C#</li>
                                 <li>JavaScript</li>
                                 <li>Lua</li>
@@ -126,7 +126,7 @@
                                 <li>PHP</li>
                                 <li>Java</li>
                                 <li>Python</li>
-                            </ol>
+                            </ul>
                         </li>
                         <li>Outras Linguagens
                             <ul>
