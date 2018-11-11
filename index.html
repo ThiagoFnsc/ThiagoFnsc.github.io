@@ -176,7 +176,7 @@
             .certificate-img img{
                 max-width:100%;
                 max-height:80vh;
-                width: auto;
+                width: 100vh;
                 height: auto;
             }
 
@@ -196,7 +196,7 @@
                         </button>
                     </div>
                     <div class="modal-body certificate-img">
-                        <img id="img-cert">
+                        <img id="img-cert" src="imgs/cert-placeholder.svg">
                     </div>
                 </div>
             </div>
@@ -207,7 +207,12 @@
         <script>
             $("#main-container").collapse();
             $("#certificate").on("show.bs.modal", () => {
-                $("#img-cert").attr("src", "imgs/certificado.jpg"); //Apenas faz o download da imagem se clicarem pra vizualizar
+                var image = $("#img-cert");
+                var downloadingImage = new Image();
+                downloadingImage.onload = function () {
+                    $("#img-cert").attr("src", "imgs/certificado.jpg");
+                };
+                downloadingImage.src = "imgs/certificado.jpg";
             });
         </script>
     </body>
