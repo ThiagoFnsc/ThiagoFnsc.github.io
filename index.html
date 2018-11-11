@@ -161,7 +161,7 @@
                 <section class="shadow-sm px-2 py-1 my-2 rounded">
                     <h3>Informações adicionais</h3>
                     <ul class="mb-1">
-                        <li><a href="#" data-toggle="modal" data-target="#certificate">Certificado de aluno destaque</a> em <i>Fundamentos de Rede e Conectividade</i> do curso Técnico de Informática</li>
+                        <li><a class="link-to-cert" href="#" data-toggle="modal" data-target="#certificate">Certificado de aluno destaque</a> em <i>Fundamentos de Rede e Conectividade</i> do curso Técnico de Informática</li>
                     </ul>
                 </section>
                 <section class="shadow-sm px-2 py-1 my-2 rounded">
@@ -207,13 +207,12 @@
         <script>
             $("#main-container").collapse();
             $("#certificate").on("show.bs.modal", () => {
-                var image = $("#img-cert");
-                var downloadingImage = new Image();
-                downloadingImage.onload = function () {
-                    $("#img-cert").attr("src", "imgs/certificado.jpg");
-                };
-                downloadingImage.src = "imgs/certificado.jpg";
+                var buffer = new Image();
+                buffer.onload = () => $("#img-cert").attr("src", "imgs/certificado.jpg");
+                buffer.src = "imgs/certificado.jpg";
             });
+            window.onbeforeprint = () => $(".link-to-cert").attr("href", "https://thiagofnsc.github.io/imgs/certificado.jpg");
+            window.onafterprint = () => $(".link-to-cert").attr("href", "#");
         </script>
     </body>
 </html>
