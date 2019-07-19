@@ -157,7 +157,7 @@
                     <div class="card shadow-sm mb-2">
                         <div class="card-header">Sobre</div>
                         <div class="card-body">
-                            <h5 class="card-title">Thiago Fonseca da Silveira</h5>
+                            <h5 class="card-title"><a href="#" , class="link-to-propic"><img src="imgs/perfil.png" class="rounded-circle mr-2"></a>Thiago Fonseca da Silveira</h5>
                             <p class="card-text"> Brasileiro, solteiro, <span id="idade"></span><br>
                                 Rua Servidão dos Flôres, 89<br>
                                 Jansen, Gravataí – RS<br>
@@ -253,7 +253,6 @@
             .img-modal-img img {
                 max-width: 100%;
                 max-height: 80vh;
-                width: 100vh;
                 height: auto;
             }
 
@@ -326,7 +325,8 @@
                     $(this.trigger).attr("href", value ? this.offlineUrl : "#");
                 }
             }
-            var imgs = [new Img("imgs/cert-lowres.jpg", "imgs/certificado.jpg", "Certificado", ".link-to-cert", "https://thiagofnsc.github.io/imgs/certificado.jpg")];
+            var imgs = [new Img("imgs/cert-lowres.jpg", "imgs/certificado.jpg", "Certificado", ".link-to-cert", "https://thiagofnsc.github.io/imgs/certificado.jpg"),
+            new Img("imgs/perfil-lowres.png", "imgs/perfil.png", "Foto", ".link-to-propic", "https://thiagofnsc.github.io/imgs/perfil.png")];
 
             window.onbeforeprint = () => {
                 imgs.forEach(img => img.print(true));
