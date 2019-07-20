@@ -1,0 +1,93 @@
+<style>
+    .media-content {
+        margin: 0 auto;
+        max-height: 50vh;
+        max-width: 100%;
+        width: auto;
+        display: block;
+    }
+
+    p {
+        margin-bottom: .5rem;
+    }
+</style>
+<script>
+    document.title = "Projeto de automação residencial";
+</script>
+<div class="jumbotron py-1 px-2 mb-1 bg-transparent">
+    <h3 class="text-center">Projeto de automação residencial <a href="/" class="btn btn-primary">Voltar</a></h3>
+    <div class="cust-card-columns card-columns pt-1">
+        <div class="card">
+            <div class="card-header">
+                <a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a>
+            </div>
+            <img class="card-img-top p-3 media-content" src="/pages/projetos/imgs/rpi.png" alt="Raspberry Pi">
+            <div class="card-body">
+                <p class="card-text">Roda no RaspberryPi o <a href="https://www.openhab.org/" target="_blank">OpenHAB</a>. Esse software se encarrega de:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Comunicar com o NodeMCU via protocolo <a href="http://mqtt.org/" target="_blank">MQTT</a> para controlar as lâmpadas</li>
+                <li class="list-group-item">Servir o aplicativo do OpenHAB</li>
+                <li class="list-group-item">Disponibilizar as lâmpadas para a Google Assistente para poder controlá-las por voz no celular ou em um Google Home</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a href="https://www.nodemcu.com/index_en.html" target="_blank">NodeMCU</a>
+            </div>
+            <img class="card-img-top" src="/pages/projetos/imgs/controlador.png" alt="Controlador NodeMCU">
+            <div class="text-center"><i>Foto do circuito que se encontra na minha caixa de disjuntor</i></div>
+            <div class="card-body">
+                <p class="card-text">O NodeMCU é uma placa de desenvolvimento que funciona a partir do microcontrolador <a href="https://pt.wikipedia.org/wiki/ESP8266" target="_blank">ESP8266</a> que pode se conectar a Wi-Fi.</p>
+                <p class="card-text">A placa se encontra na caixa de disjuntor, onde todos os fios de comunicação de cada interruptor chegam.</p>
+                <p class="card-text">O NodeMCU monitora os interruptores, liga/desliga as lâmpadas de acordo e comunica com o Raspberry Pi para funções mais avançadas.</p>
+                <p class="card-text">O código pode ser encontrado na minha página do GitHub: <a href="https://github.com/ThiagoFnsc/IoT-Lamps" target="_blank">IoT-Lamps</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Os interruptores</div>
+            <div class="card-body">
+                <p class="card-text">Eram originalmente como em qualquer outra casa, a lâmpada era conectada na rede elétrica com um interruptor no meio. O interruptor foi desconectado da rede elétrica e em seu lugar foi posto um <a href="https://pt.wikipedia.org/wiki/Rel%C3%A9" target="_blank">relé</a> para que o controlador possa completar ou abrir o circuito. O interruptor então foi trocado pelo tipo campainha e conectado no circuito lógico de 5v do controlador.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Os interruptores não têm mais posição ligada e posição desligada</div>
+            <div class="card-body">
+                <p class="card-text">Os interruptores são do tipo campainha, logo eles têm apenas dois estados: pressionado e solto. A luz inverte o estado toda vez que o interruptor é pressionado.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">A lâmpada não precisa estar fisicamente conectada no NodeMCU para poder ser gerenciada por ele</div>
+            <div class="card-body">
+                <p class="card-text">Por exemplo, um controlador de fita LED RGB Wi-Fi.</p>
+            </div>
+            <img class="card-img-top p-3 media-content" src="/pages/projetos/imgs/controlador-fita-led.png" alt="Controlador de fita LED RGB Wi-Fi">
+            <div class="card-body">
+                <p class="card-text">O código que eu desenvolvi permite adicionar lâmpadas que não tem nenhuma conexão física ao NodeMCU, mas que podem ser controladas pela rede via mensagens TCP.</p>
+                <p class="card-text">Sendo uma lâmpada registrada, e com a possibilidade de checar e alterar seu estado, é possível integrar no item abaixo:</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">É possível controlar o estado de qualquer lâmpada da casa a partir de qualquer interruptor</div>
+            <div class="card-body">
+                <p class="card-text">Quando o interruptor é pressionado por mais de meio segundo, ele entra no modo que permite alterar estados de outras lâmpadas. Esse modo vai invertendo o estado de todas as lâmpadas da casa em sequência até que seja solto.</p>
+            </div>
+            <div class="card-img-top">
+                <iframe width="100%" class="video16-9" src="https://www.youtube-nocookie.com/embed/K-GA90L1erY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+                <p class="card-text">O código que eu desenvolvi permite adicionar lâmpadas que não tem nenhuma conexão física ao NodeMCU, mas que podem ser controladas pela rede via mensagens TCP.</p>
+                <p class="card-text">Sendo uma lâmpada registrada, e com a possibilidade de checar e alterar seu estado, é possível integrar no item abaixo:</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">OpenHAB permite integração com a Google Assistente</div>
+            <div class="card-img-top">
+                <iframe width="100%" class="video16-9" src="https://www.youtube-nocookie.com/embed/pjybO5947kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+                <p class="card-text">É possível controlar a partir de um celular, Google Home etc.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,15 +6,16 @@
         <link rel="icon" type="image/png" href="imgs/favicon.png" />
         <title>Currículo</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <style>
-            .navbar {
-                background-color: #aaa;
-            }
 
-            @media print {
-                .card {
-                    -webkit-print-color-adjust: exact;
-                }
+        <meta property="og:title" content="Currículo" />
+        <meta property="og:url" content="http://thiagofnsc.ddns.net:666" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Currículo de Thiago Fonseca" />
+        <meta property="og:image" content="http://thiagofnsc.ddns.net:666/imgs/perfil-lowres.png" />
+        <meta property="og:locale" content="pt_br" />
+        <style>
+            body {
+                background-color: #4a5157;
             }
 
             @keyframes reveal {
@@ -31,55 +32,20 @@
                 border-radius: 0 0 .3rem .3rem;
                 animation-name: reveal;
                 animation-duration: .5s;
-                background-color: #ccc;
             }
 
-            img {
-                height: 2.5rem;
-            }
-
-            a img:hover {
-                transform: scale(1.1);
-            }
-
-            .inline-img {
-                height: 1.5rem;
-                margin-top: -.25rem;
-            }
-
-            .card:hover,
-            h2:hover {
-                transform: scale(1.01);
-            }
-
-            a img:active {
-                transform: scale(.9);
-            }
-
-            img,
-            h2,
-            .card {
-                transition: all .2s ease-in-out;
-            }
-
-            .card {
-                background-color: #ffffff;
-            }
-
-            h2 {
-                border: .3rem solid transparent;
-            }
-
-            h2:hover {
-                background-color: #ccc;
-            }
-
+            .card,
+            .bg-card,
             .list-group-item {
-                background-color: transparent;
+                background-color: #e9ecef;
             }
 
-            .card:hover {
-                background-color: #edefff;
+            .card,
+            .navbar,
+            body,
+            .list-group-item,
+            .texture {
+                background-image: url(data:image/png;base64,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);
             }
 
             .card-header {
@@ -91,13 +57,6 @@
                 column-gap: .5rem;
             }
 
-            .card,
-            .navbar,
-            .jumbotron,
-            body {
-                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
-            }
-
             @media (min-width: 34em) {
                 .card-columns {
                     -webkit-column-count: 1;
@@ -106,15 +65,8 @@
                 }
             }
 
-            @media (min-width: 48em) {
-                .card-columns {
-                    -webkit-column-count: 1;
-                    -moz-column-count: 1;
-                    column-count: 1;
-                }
-            }
-
-            @media (min-width: 62em) {
+            @media (min-width: 62em),
+            print {
                 .card-columns {
                     -webkit-column-count: 2;
                     -moz-column-count: 2;
@@ -122,134 +74,26 @@
                 }
             }
 
-            @media (min-width: 75em) {
-                .card-columns {
-                    -webkit-column-count: 2;
-                    -moz-column-count: 2;
-                    column-count: 2;
+            @media print {
+                .card {
+                    -webkit-print-color-adjust: exact;
                 }
             }
         </style>
     </head>
-    <body>
-        <div class="navbar navbar-default navbar-fixed-top d-print-inline">
-            <div class="container">
-                <div class="row" style="width:100%; margin-left: 0">
-                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 p-0">
-                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
-                            <h2 class="rounded m-0 pb-1" style="text-align:center">Thiago Fonseca da Silveira</h2>
-                            <h6 class="mt-3 ml-5 print-content" style="display:none;">Original em <a href="https://thiagofnsc.github.io">ThiagoFnsc.github.io</a></h6>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 p-0">
-                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-end justify-content-xl-end" style="margin-top: .35rem;">
-                            <a title="GitHub" href="https://github.com/ThiagoFnsc" target="_blank"><img class="ml-1" src="imgs/github.svg"></a>
-                            <a title="LinkedIn" href="https://www.linkedin.com/in/thiagofnsc/" target="_blank"><img class="ml-1" src="imgs/linkedin.svg"></a>
-                            <a title="Email" href="mailto:ThiagoFnsc@outlook.com"><img class="ml-1" src="imgs/outlook.svg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <body class="bg-secondary">
         <div id="main-container" class="container p-0">
-            <div class="jumbotron py-1 px-2 mb-1">
-                <div class="cust-card-columns card-columns pt-1">
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Sobre</div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#" , class="link-to-propic"><img src="imgs/perfil.png" class="rounded-circle mr-2"></a>Thiago Fonseca da Silveira</h5>
-                            <p class="card-text"> Brasileiro, solteiro, <span id="idade"></span><br>
-                                Rua Servidão dos Flôres, 89<br>
-                                Jansen, Gravataí – RS<br>
-                                Telefone: <a title="WhatsApp" href="https://api.whatsapp.com/send?phone=5551996389877" target="_blank">(51) 996.389.877 <img class="ml-1 inline-img" src="imgs/whatsapp.svg"></a><br>
-                                E-mail: <a title="Email" href="mailto:ThiagoFnsc@outlook.com">ThiagoFnsc@outlook.com</a>
-                            </p>
-                        </div>
-                        <script>
-                            var idade = new Date(new Date() - new Date(2000, 3, 24)/*24/04/2000*/).getFullYear() - 1970;
-                            var elemento = document.getElementById("idade");
-                            elemento.innerText = idade + (idade == 1 ? " ano" : " anos");
-                            if (idade < 18)
-                                elemento.innerText += " (seu relógio está incorreto ou você é um viajante do tempo :P )";
-                            else if (idade >= 100)
-                                elemento.innerText += " (seu relógio está incorreto ou estou provavelmente morto :P )";
-                        </script>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Formação</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Curso de Ciência da Computação na ULBRA – Em andamento, 3º semestre</li>
-                            <li class="list-group-item">Ensino médio na E.E.E.M. Ponche Verde – Concluído em 2016</li>
-                        </ul>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Qualificações e atividades profissionais</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Curso de Inglês em Escolas e Faculdades QI – Concluído em 2018</li>
-                            <li class="list-group-item">Curso de Técnico de Informática em Escolas e Faculdades QI – Concluído em 2017</li>
-                        </ul>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Experiência profissional</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Trail Blazers, equipe de robótica de Gravataí – 2010-2014</li>
-                        </ul>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Idiomas</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Inglês: intermediário-avançado</li>
-                        </ul>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Habilidades</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Linguagens de programação
-                                <ul>
-                                    <li>C#</li>
-                                    <li>C</li>
-                                    <li>C++</li>
-                                    <li>JavaScript</li>
-                                    <li>Lua</li>
-                                    <li>PHP</li>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">Web
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>Bootstrap</li>
-                                    <li>p5.js</li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">Design
-                                <ul>
-                                    <li>Adobe Photoshop</li>
-                                    <li>Adobe Premiere</li>
-                                    <li>Inkscape</li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">Eletrônicos
-                                <ul>
-                                    <li>Arduino</li>
-                                    <li>ESP8266</li>
-                                    <li>Raspberry Pi</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card shadow-sm mb-2">
-                        <div class="card-header">Informações adicionais</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a class="link-to-cert" href="#">Certificado de aluno destaque</a> em <i>Fundamentos de Rede e Conectividade</i> do curso Técnico de Informática</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
         <style>
+            a {
+                color: darkblue;
+            }
+
+            a:hover {
+                color: #0072cf;
+                text-decoration: none;
+            }
+
             .img-modal-img img {
                 max-width: 100%;
                 max-height: 80vh;
@@ -291,6 +135,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script>
+            if (window.navigator.userAgent.indexOf("MSIE ") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0) {
+                alert("Esse navegador não é suportado.\nVocê será redirecionado para escolher um melhor.");
+                window.location.replace("http://outdatedbrowser.com/pt-br");
+            }
+        </script>
+        <script>
+            function onResize() {
+                $(".video16-9").each((i, el) =>
+                    $(el).height(($(el).width() || $(el).parent().width()) / (16 / 9)));
+            }
+            $(window).resize(onResize);
+            $("#main-container").load("/pages/" + (new URLSearchParams(window.location.search).get("p") || "curriculo.html"), (data, status) => {
+                onResize();
+            });
             class Img {
                 constructor(thumb, image, text, trigger, offlineUrl) {
                     this.thumb = thumb;
@@ -325,9 +183,6 @@
                     $(this.trigger).attr("href", value ? this.offlineUrl : "#");
                 }
             }
-            var imgs = [new Img("imgs/cert-lowres.jpg", "imgs/certificado.jpg", "Certificado", ".link-to-cert", "https://thiagofnsc.github.io/imgs/certificado.jpg"),
-            new Img("imgs/perfil-lowres.png", "imgs/perfil.png", "Foto", ".link-to-propic", "https://thiagofnsc.github.io/imgs/perfil.png")];
-
             window.onbeforeprint = () => {
                 imgs.forEach(img => img.print(true));
                 $(".print-content").show();
